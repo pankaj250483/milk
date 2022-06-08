@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Quicksand&display=swap');
+
+:root 
+{
+    --blue: #7dc3ed;
+    --green: #78b82a;
+}
+
+*
+{
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--blue);
+    font-size: 20px;
+}
+
+.header
+{
+    background: var(--blue);
+    color: white;
+}
+
+.nav-link:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+  }
+
+.nav-link:hover:after, .active:after {
+    width: 100%;
+    background: var(--green);
+  }
+
+.logo
+{
+    width: 150px;
+    height: 100px;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: 'Barlow', sans-serif;
+}
+
+h1
+{
+    font-weight: 600;
+}
+
+.zoom
+{
+    animation: zoom-on 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes zoom-on 
+{
+    from {transform: scale(1);}
+    to {transform: scale(1.08);}
+}
+
+a:link, a:active, a:visited
+{
+    text-decoration: none;
+    color: black;
+}
+
+a.footer:hover
+{
+    text-decoration: underline;
+    color: grey;
+}
+
+ i
+{
+    font-size: 40px;
+    color: black;
+    padding: 5px;
+}
+
+i:hover
+{
+    color: grey;
+}
+
+.card
+{
+    
+}
+
+.card:hover
+{
+    border: 1px solid var(--green);
+}
+
+label,.hint
+{
+    margin: 0px;
+    display: block;
+    padding: 0px;
+    color: var(--blue);
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.hint
+{
+    color: lightgrey;
+    margin-bottom: 5px;
+}
+
+select, input, textarea
+{
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    border-radius: 5px;
+    padding: 2px;
+    width: 100%;
+}
+
+textarea
+{
+    height: 150px;
+}
+
+input:hover, input:focus
+{
+    border: 1px solid var(--green);
+}
+
+.check
+{
+    width: 20px;
+}
+
+.instruction
+{
+    font-size: 15px;
+    line-height: 1.2;
+}
